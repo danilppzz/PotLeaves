@@ -8,6 +8,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -20,14 +21,14 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, PotLeaves.MODID);
 
     // Here goes the mod blocks
-    public static final RegistryObject<Block> WOODEN_POT = registerBlock("wooden_pot",
-            () -> new Block(CustomWoodenPot.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
-    public static final RegistryObject<Block> SMALL_LEAVE_POT = registerBlock("small_leave_pot",
-            () -> new Block(CustomWoodenPot.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
-    public static final RegistryObject<Block> BIG_LEAVE_POT = registerBlock("big_leave_pot",
-            () -> new Block(CustomWoodenPot.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
-    public static final RegistryObject<Block> WOODEN_BOX = registerBlock("wooden_box",
-            () -> new Block(CustomWoodenBox.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
+    public static final RegistryObject<CustomWoodenPot> WOODEN_POT = registerBlock("wooden_pot",
+            () -> new CustomWoodenPot(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
+    public static final RegistryObject<CustomWoodenPot> SMALL_LEAVE_POT = registerBlock("small_leave_pot",
+            () -> new CustomWoodenPot(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
+    public static final RegistryObject<CustomWoodenPot> BIG_LEAVE_POT = registerBlock("big_leave_pot",
+            () -> new CustomWoodenPot(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
+    public static final RegistryObject<CustomWoodenBox> WOODEN_BOX = registerBlock("wooden_box",
+            () -> new CustomWoodenBox(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
 
     // Register this blocks as items to.
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
