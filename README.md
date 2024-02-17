@@ -1,5 +1,5 @@
 <div style="text-align:center">
-    <img src="https://raw.githubusercontent.com/danilppzz/PotLeaves/master/resources/BANNER.png" alt="BANNER" style="max-width:100%;">
+    <img src="https://raw.githubusercontent.com/danilppzz/PotLeaves/master/resources/_BANNER.png" alt="BANNER" style="max-width:100%;">
 </div>
 
 
