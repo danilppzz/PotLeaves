@@ -3,5 +3,8 @@
   "block.potleaves.wooden_pot": "Holztopf",
   "block.potleaves.small_leave_pot": "Kleiner Blättertopf",
   "block.potleaves.big_leave_pot": "Großer Blättertopf",
-  "block.potleaves.wooden_box": "Holzkiste"
+  "block.potleaves.wooden_box": "Holzkiste",
+  "block.potleaves.slim_wooden_pot": "Schlanker Holztopf",
+  "block.potleaves.slim_cactus_pot": "Schlanker Kaktustopf",
+  "block.potleaves.slim_pink_cactus_pot": "Schlanker Rosa Kaktustopf"
 }

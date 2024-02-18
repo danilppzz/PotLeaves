@@ -3,6 +3,7 @@ package dev.danilppzz.potleaves.register;
 import dev.danilppzz.potleaves.PotLeaves;
 import dev.danilppzz.potleaves.custom.CustomWoodenBox;
 import dev.danilppzz.potleaves.custom.CustomWoodenPot;
+import dev.danilppzz.potleaves.custom.CustomWoodenSlimPot;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -21,12 +22,20 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, PotLeaves.MODID);
 
     // Here goes the mod blocks
+    public static final RegistryObject<CustomWoodenSlimPot> SLIM_WOODEN_POT = registerBlock("slim_wooden_pot",
+            () -> new CustomWoodenSlimPot(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
+    public static final RegistryObject<CustomWoodenSlimPot> SLIM_CACTUS_POT = registerBlock("slim_cactus_pot",
+            () -> new CustomWoodenSlimPot(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
+    public static final RegistryObject<CustomWoodenSlimPot> SLIM_PINK_CACTUS_POT = registerBlock("slim_pink_cactus_pot",
+            () -> new CustomWoodenSlimPot(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
+
     public static final RegistryObject<CustomWoodenPot> WOODEN_POT = registerBlock("wooden_pot",
             () -> new CustomWoodenPot(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
     public static final RegistryObject<CustomWoodenPot> SMALL_LEAVE_POT = registerBlock("small_leave_pot",
             () -> new CustomWoodenPot(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
     public static final RegistryObject<CustomWoodenPot> BIG_LEAVE_POT = registerBlock("big_leave_pot",
             () -> new CustomWoodenPot(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
+
     public static final RegistryObject<CustomWoodenBox> WOODEN_BOX = registerBlock("wooden_box",
             () -> new CustomWoodenBox(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
 
