@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "potleaves:block/slim_wooden_pot"
+    },
+    "facing=east": {
+      "model": "potleaves:block/slim_wooden_pot",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "potleaves:block/slim_wooden_pot",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "potleaves:block/slim_wooden_pot",
+      "y": 270
+    }
+  }
+}

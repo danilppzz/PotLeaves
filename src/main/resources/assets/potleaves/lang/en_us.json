@@ -3,5 +3,8 @@
   "block.potleaves.wooden_pot": "Wooden Pot",
   "block.potleaves.small_leave_pot": "Small Leave Pot",
   "block.potleaves.big_leave_pot": "Big Leave Pot",
-  "block.potleaves.wooden_box": "Wooden Box"
+  "block.potleaves.wooden_box": "Wooden Box",
+  "block.potleaves.slim_wooden_pot": "Slim Wooden Pot",
+  "block.potleaves.slim_cactus_pot": "Slim Cactus Pot",
+  "block.potleaves.slim_pink_cactus_pot": "Slim Pink Cactus Pot"
 }
