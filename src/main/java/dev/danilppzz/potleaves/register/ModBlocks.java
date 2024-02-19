@@ -34,7 +34,7 @@ public class ModBlocks {
     public static final RegistryObject<CustomWoodenPot> SMALL_LEAVE_POT = registerBlock("small_leave_pot",
             () -> new CustomWoodenPot(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
     public static final RegistryObject<CustomWoodenPot> BIG_LEAVE_POT = registerBlock("big_leave_pot",
-            () -> new CustomWoodenPot(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
+            () -> new CustomWoodenPot(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.BAMBOO_WOOD)));
 
     public static final RegistryObject<CustomWoodenBox> WOODEN_BOX = registerBlock("wooden_box",
             () -> new CustomWoodenBox(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).sound(SoundType.BAMBOO_WOOD)));
