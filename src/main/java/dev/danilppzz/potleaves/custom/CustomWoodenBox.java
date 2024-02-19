@@ -46,6 +46,6 @@ public class CustomWoodenBox extends Block {
     }
 
     static {
-        FACING = HorizontalDirectionalBlock.FACING;
+        FACING = BlockStateProperties.FACING;
     }
 }
