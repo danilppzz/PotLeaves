@@ -4,7 +4,10 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -42,7 +45,12 @@ public class CustomWoodenBox extends Block {
 
     @Override
     public @NotNull VoxelShape getShape(BlockState p_60555_, BlockGetter p_60556_, BlockPos p_60557_, CollisionContext p_60558_) {
-        return Block.box(4,0,2,12,7,14);
+        Direction $$1 = (Direction)p_60555_.getValue(FACING);
+        if ($$1 != Direction.NORTH && $$1 != Direction.SOUTH) {
+            return Block.box(4,0,2,12,7,14);
+        }
+
+        return Block.box(2,0,4,14,7,12);
     }
 
     static {

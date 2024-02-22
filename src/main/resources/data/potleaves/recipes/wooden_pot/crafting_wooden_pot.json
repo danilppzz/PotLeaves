@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "   ",
+    "121",
+    " 1 "
+  ],
+  "key": {
+    "2": {
+      "item": "minecraft:dirt"
+    },
+    "1": {
+      "item": "minecraft:spruce_planks"
+    }
+  },
+  "result": {
+    "item": "potleaves:wooden_pot"
+  }
+}
