@@ -28,9 +28,12 @@ public class PotLeaves {
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
+        // Slim Wooden Pot
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.SLIM_CACTUS_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.SLIM_PINK_CACTUS_POT.get(), RenderType.cutout());
 
+        // Wooden Pot
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_WOODEN_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BIG_LEAVE_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.SMALL_LEAVE_POT.get(), RenderType.cutout());
     }
