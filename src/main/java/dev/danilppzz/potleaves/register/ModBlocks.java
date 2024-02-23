@@ -1,6 +1,7 @@
 package dev.danilppzz.potleaves.register;
 
 import dev.danilppzz.potleaves.PotLeaves;
+import dev.danilppzz.potleaves.custom.CustomLargeWoodenPot;
 import dev.danilppzz.potleaves.custom.CustomWoodenBox;
 import dev.danilppzz.potleaves.custom.CustomWoodenPot;
 import dev.danilppzz.potleaves.custom.CustomWoodenSlimPot;
@@ -29,6 +30,13 @@ public class ModBlocks {
     public static final RegistryObject<CustomWoodenSlimPot> SLIM_PINK_CACTUS_POT = registerBlock("slim_pink_cactus_pot",
             () -> new CustomWoodenSlimPot(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.BAMBOO_WOOD)));
 
+    // Large Pot
+    public static final RegistryObject<CustomLargeWoodenPot> LARGE_WOODEN_POT = registerBlock("large_wooden_pot",
+            () -> new CustomLargeWoodenPot(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.BAMBOO_WOOD)));
+    public static final RegistryObject<CustomLargeWoodenPot> LARGE_LEAVE_POT_1 = registerBlock("large_leave_pot_1",
+            () -> new CustomLargeWoodenPot(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.BAMBOO_WOOD)));
+
+    // Big, Small, Mini Pot's
     public static final RegistryObject<CustomWoodenPot> WOODEN_POT = registerBlock("wooden_pot",
             () -> new CustomWoodenPot(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.BAMBOO_WOOD)));
     public static final RegistryObject<CustomWoodenPot> SMALL_LEAVE_POT = registerBlock("small_leave_pot",
@@ -38,6 +46,7 @@ public class ModBlocks {
     public static final RegistryObject<CustomWoodenPot> MINI_WOODEN_POT = registerBlock("mini_leave_pot",
             () -> new CustomWoodenPot(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.BAMBOO_WOOD)));
 
+    // Storage Unit
     public static final RegistryObject<CustomWoodenBox> WOODEN_BOX = registerBlock("wooden_box",
             () -> new CustomWoodenBox(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.BAMBOO_WOOD)));
 

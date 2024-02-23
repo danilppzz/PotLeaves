@@ -4,7 +4,7 @@
 	"textures": {
 		"0": "potleaves:block/wooden_pot",
 		"2": "potleaves:block/leaves_1",
-		"particle": "potleaves:block/leaves_1"
+		"particle": "potleaves:block/slim_wooden_pot"
 	},
 	"elements": [
 		{

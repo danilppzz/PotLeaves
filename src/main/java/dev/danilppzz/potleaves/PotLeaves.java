@@ -36,5 +36,9 @@ public class PotLeaves {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_WOODEN_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BIG_LEAVE_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.SMALL_LEAVE_POT.get(), RenderType.cutout());
+
+        // Large Pot
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.LARGE_LEAVE_POT_1.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.LARGE_WOODEN_POT.get(), RenderType.cutout());
     }
 }

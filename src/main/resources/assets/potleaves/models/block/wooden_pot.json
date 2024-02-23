@@ -3,7 +3,7 @@
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "potleaves:block/wooden_pot",
-		"particle": "potleaves:block/leaves_1"
+		"particle": "potleaves:block/slim_wooden_pot"
 	},
 	"elements": [
 		{
