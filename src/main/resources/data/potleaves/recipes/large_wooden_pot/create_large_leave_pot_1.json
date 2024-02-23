@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "   ",
+    "223",
+    " 1 "
+  ],
+  "key": {
+    "3": {
+      "item": "minecraft:allium"
+    },
+    "2": {
+      "item": "minecraft:grass"
+    },
+    "1": {
+      "item": "potleaves:large_wooden_pot"
+    }
+  },
+  "result": {
+    "item": "potleaves:large_leave_pot_1"
+  }
+}

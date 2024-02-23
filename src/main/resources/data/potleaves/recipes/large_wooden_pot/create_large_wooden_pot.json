@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "   ",
+    "212",
+    "333"
+  ],
+  "key": {
+    "3": {
+      "item": "minecraft:spruce_planks"
+    },
+    "2": {
+      "item": "minecraft:stick"
+    },
+    "1": {
+      "item": "minecraft:dirt"
+    }
+  },
+  "result": {
+    "item": "potleaves:large_wooden_pot"
+  }
+}
