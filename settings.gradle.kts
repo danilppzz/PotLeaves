@@ -1,12 +1,11 @@
 pluginManagement {
     repositories {
-        maven(url = "https://maven.minecraftforge.net/")
         gradlePluginPortal()
+        maven(url = "https://maven.minecraftforge.net/")
+        maven(url = "https://maven.architectury.dev/")
+        maven(url = "https://maven.fabricmc.net/")
     }
 }
 
-plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "0.7.0"
-}
-
+include("common", "fabric", "forge", /*"neoforge"*/)
 rootProject.name = "PotLeaves"
