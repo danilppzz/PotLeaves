@@ -1,5 +1,6 @@
 package dev.danilppzz.potleaves;
 
+import dev.danilppzz.potleaves.client.PotLeavesClient;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

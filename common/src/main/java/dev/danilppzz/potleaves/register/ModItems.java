@@ -1,11 +1,10 @@
 package dev.danilppzz.potleaves.register;
 
+import dev.architectury.registry.registries.DeferredRegister;
 import dev.danilppzz.potleaves.PotLeaves;
-import dev.tonimatas.registry.PotRegistries;
-import dev.tonimatas.registry.PotRegistry;
-import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
 
 public class ModItems {
-    public static final PotRegistry<Item> ITEMS = PotRegistries.create(BuiltInRegistries.ITEM, PotLeaves.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(PotLeaves.MOD_ID, Registries.ITEM);
 }

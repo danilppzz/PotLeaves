@@ -1,4 +1,4 @@
-package dev.tonimatas.inventory;
+package dev.danilppzz.potleaves.inventory;
 
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.Container;
@@ -7,20 +7,17 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
-@SuppressWarnings("unused")
 public interface ModInventory extends Container {
+
     static ModInventory of(NonNullList<ItemStack> items) {
         return () -> items;
     }
 
-    static ModInventory create(final int slots) {
+    static ModInventory create(int slots) {
         return new ModInventory() {
-            private final NonNullList<ItemStack> inventory;
+            private final NonNullList<ItemStack> inventory = NonNullList.withSize(slots, ItemStack.EMPTY);
 
-            {
-                this.inventory = NonNullList.withSize(slots, ItemStack.EMPTY);
-            }
-
+            @Override
             public NonNullList<ItemStack> getItems() {
                 return this.inventory;
             }
@@ -29,53 +26,59 @@ public interface ModInventory extends Container {
 
     NonNullList<ItemStack> getItems();
 
+    @Override
     default int getContainerSize() {
-        return this.getItems().size();
+        return getItems().size();
     }
 
+    @Override
     default boolean isEmpty() {
-        for(int i = 0; i < this.getContainerSize(); ++i) {
-            ItemStack stack = this.getItem(i);
+        for (int i = 0; i < getContainerSize(); i++) {
+            ItemStack stack = getItem(i);
             if (!stack.isEmpty()) {
                 return false;
             }
         }
-
         return true;
     }
 
+    @Override
     default @NotNull ItemStack getItem(int slot) {
-        return this.getItems().get(slot);
+        return getItems().get(slot);
     }
 
+    @Override
     default @NotNull ItemStack removeItem(int slot, int count) {
-        ItemStack result = ContainerHelper.removeItem(this.getItems(), slot, count);
+        ItemStack result = ContainerHelper.removeItem(getItems(), slot, count);
         if (!result.isEmpty()) {
-            this.setChanged();
+            setChanged();
         }
-
         return result;
     }
 
+    @Override
     default @NotNull ItemStack removeItemNoUpdate(int slot) {
-        return ContainerHelper.takeItem(this.getItems(), slot);
+        return ContainerHelper.takeItem(getItems(), slot);
     }
 
+    @Override
     default void setItem(int slot, ItemStack stack) {
-        this.getItems().set(slot, stack);
-        if (stack.getCount() > this.getMaxStackSize()) {
-            stack.setCount(this.getMaxStackSize());
+        getItems().set(slot, stack);
+        if (stack.getCount() > getMaxStackSize()) {
+            stack.setCount(getMaxStackSize());
         }
-
     }
 
+    @Override
     default void clearContent() {
-        this.getItems().clear();
+        getItems().clear();
     }
 
+    @Override
     default void setChanged() {
     }
 
+    @Override
     default boolean stillValid(Player player) {
         return true;
     }
