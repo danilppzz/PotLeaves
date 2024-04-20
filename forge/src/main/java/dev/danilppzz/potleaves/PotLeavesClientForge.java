@@ -11,6 +11,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 public class PotLeavesClientForge {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
-        PotLeavesClient.init();
+        event.enqueueWork(PotLeavesClient::init);
     }
 }
