@@ -7,19 +7,19 @@
   "authors": [
     "danilppzz"
   ],
+  "contact": {
+    "issues": "https://github.com/danilppzz/PotLeaves/issues"
+  },
   "license": "https://github.com/danilppzz/danilppzz/blob/main/LICENSE",
   "icon": "potleaves.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "dev.danilppzz.potleaves.PotLeavesFabric"
-    ],
-    "client": [
-      "dev.danilppzz.potleaves.PotLeavesClientFabric"
-    ]
+    "main": ["dev.danilppzz.potleaves.PotLeavesFabric"],
+    "client": ["dev.danilppzz.potleaves.PotLeavesClientFabric"]
   },
   "depends": {
     "fabricloader": ">=0.12.12",
-    "minecraft": "${minecraftVersion}"
+    "minecraft": "${minecraftVersion}",
+    "architectury": "*"
   }
 }

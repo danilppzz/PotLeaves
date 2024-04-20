@@ -1,7 +1,7 @@
 modLoader="javafml"
 loaderVersion="[${forgeVersionRange},)"
 license="https://github.com/danilppzz/danilppzz/blob/main/LICENSE"
-#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+issueTrackerURL="https://github.com/danilppzz/PotLeaves/issues"
 
 [[mods]]
 modId="potleaves"
@@ -29,5 +29,11 @@ side="BOTH"
 modId="minecraft"
 mandatory=true
 versionRange="[${minecraftVersion}]"
+ordering="NONE"
+side="BOTH"
+[[dependencies.potleaves]]
+modId="architectury"
+mandatory=true
+versionRange="[0,)"
 ordering="NONE"
 side="BOTH"
