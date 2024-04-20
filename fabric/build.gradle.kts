@@ -18,6 +18,7 @@ val fabricLoaderVersion: String by extra
 val fabricApiVersion: String by extra
 val fabricMinecraftVersionRange: String by extra
 val modVersion: String by extra
+val architecturyVersion: String by extra
 
 val common by configurations.creating
 val shadowCommon by configurations.creating
@@ -28,8 +29,8 @@ configurations["developmentFabric"].extendsFrom(common)
 
 dependencies {
     modImplementation("net.fabricmc:fabric-loader:$fabricLoaderVersion")
-
-    modApi("net.fabricmc.fabric-api:fabric-api:$fabricApiVersion+$minecraftVersion") // Fabric API
+    
+    modApi("dev.architectury:architectury-fabric:$architecturyVersion")
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowCommon(project(path = ":common", configuration = "transformProductionFabric")) { isTransitive = false }

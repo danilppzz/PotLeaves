@@ -12,6 +12,7 @@ val modVersion: String by extra
 val minecraftVersion: String by extra
 val forgeVersion: String by extra
 val forgeVersionRange: String by extra
+val architecturyVersion: String by extra
 
 architectury {
     platformSetupLoomIde()
@@ -28,6 +29,8 @@ configurations["developmentForge"].extendsFrom(common)
 dependencies {
     forge("net.minecraftforge:forge:$minecraftVersion-$forgeVersion")
 
+    modApi("dev.architectury:architectury-forge:$architecturyVersion")
+    
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowCommon(project(path = ":common", configuration = "transformProductionForge")) { isTransitive = false }
 }
