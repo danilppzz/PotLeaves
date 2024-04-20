@@ -6,6 +6,6 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class WoodenBoxScreen extends BaseScreen<WoodenBoxMenu> {
     public WoodenBoxScreen(WoodenBoxMenu abstractContainerMenu, Inventory inventory, Component component) {
-        super(abstractContainerMenu, inventory, component, 0, 0, "gui");
+        super(abstractContainerMenu, inventory, component, 176, 176, 0, -7, "storage");
     }
 }
