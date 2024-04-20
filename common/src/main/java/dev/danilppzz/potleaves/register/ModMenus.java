@@ -11,6 +11,6 @@ import net.minecraft.world.inventory.MenuType;
 public class ModMenus {
     public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(PotLeaves.MOD_ID, Registries.MENU);
 
-    public static final RegistrySupplier<MenuType<WoodenBoxMenu>> WOODEN_BOX = MENUS.register("cutting_station_menu", () ->
+    public static final RegistrySupplier<MenuType<WoodenBoxMenu>> WOODEN_BOX = MENUS.register("wooden_box_menu", () ->
             MenuRegistry.ofExtended(WoodenBoxMenu::new));
 }
