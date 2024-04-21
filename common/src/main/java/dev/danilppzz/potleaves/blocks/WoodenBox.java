@@ -1,11 +1,13 @@
 package dev.danilppzz.potleaves.blocks;
 
+import com.mojang.serialization.MapCodec;
 import dev.danilppzz.potleaves.blocks.base.BlockEntityBase;
 import dev.danilppzz.potleaves.register.ModBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -16,9 +18,15 @@ import org.jetbrains.annotations.Nullable;
 
 @SuppressWarnings("deprecation")
 public class WoodenBox extends BlockEntityBase {
+    private static final MapCodec<WoodenBox> CODEC = simpleCodec(WoodenBox::new);
 
     public WoodenBox(Properties properties) {
         super(properties.dynamicShape().noOcclusion());
+    }
+
+    @Override
+    protected @NotNull MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 
     @Override

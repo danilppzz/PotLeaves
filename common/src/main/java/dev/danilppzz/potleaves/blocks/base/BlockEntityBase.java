@@ -15,8 +15,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
@@ -137,9 +137,9 @@ public abstract class BlockEntityBase extends BaseEntityBlock {
     }
 
     @Override
-    public @NotNull ItemStack getCloneItemStack(BlockGetter blockGetter, BlockPos blockPos, BlockState blockState) {
-        ItemStack stack = super.getCloneItemStack(blockGetter, blockPos, blockState);
-        if (blockGetter.getBlockEntity(blockPos) instanceof BaseBlockEntity machineBlock) {
+    public @NotNull ItemStack getCloneItemStack(LevelReader levelReader, BlockPos blockPos, BlockState blockState) {
+        ItemStack stack = super.getCloneItemStack(levelReader, blockPos, blockState);
+        if (levelReader.getBlockEntity(blockPos) instanceof BaseBlockEntity machineBlock) {
             CompoundTag tag = stack.getOrCreateTag();
             ContainerHelper.saveAllItems(tag, machineBlock.getItems());
         }
