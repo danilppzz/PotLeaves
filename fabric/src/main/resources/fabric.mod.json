@@ -2,23 +2,25 @@
   "schemaVersion": 1,
   "id": "potleaves",
   "version": "${modVersion}",
+
   "name": "Pot Leaves",
   "description": "This mod is very simple, it basically adds a bunch of pots with different plants.\nSome of them have special functions like attracting some mobs/animals, or other functions like foot farming and more.",
-  "authors": [
-    "danilppzz"
-  ],
+  "authors": ["danilppzz", "TonimatasDEV"],
   "contact": {
     "issues": "https://github.com/danilppzz/PotLeaves/issues"
   },
+  
   "license": "https://github.com/danilppzz/danilppzz/blob/main/LICENSE",
   "icon": "potleaves.png",
+
   "environment": "*",
   "entrypoints": {
     "main": ["dev.danilppzz.potleaves.PotLeavesFabric"],
     "client": ["dev.danilppzz.potleaves.PotLeavesClientFabric"]
   },
+
   "depends": {
-    "fabricloader": ">=0.12.12",
+    "fabricloader": "*",
     "minecraft": "${minecraftVersion}",
     "architectury": "*"
   }
