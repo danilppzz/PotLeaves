@@ -1,4 +1,4 @@
-package dev.danilppzz.potleaves.blocks;
+package dev.danilppzz.potleaves.blocks.base;
 
 import dev.architectury.registry.menu.ExtendedMenuProvider;
 import dev.architectury.registry.menu.MenuRegistry;
@@ -23,16 +23,15 @@ import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("deprecation")
-public abstract class AbstractEntityBlock extends BaseEntityBlock {
+public abstract class BlockEntityBase extends BaseEntityBlock {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
-    public AbstractEntityBlock(Properties properties) {
+    public BlockEntityBase(Properties properties) {
         super(properties);
         this.registerDefaultState(this.buildDefaultState());
     }
@@ -89,12 +88,12 @@ public abstract class AbstractEntityBlock extends BaseEntityBlock {
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moved) {
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = level.getBlockEntity(pos);
-            if (blockEntity instanceof BaseBlockEntity machineBlock) {
-                if (machineBlock.getInventorySize() > 0) {
+            if (blockEntity instanceof BaseBlockEntity baseBlockEntity) {
+                if (baseBlockEntity.getInventorySize() > 0) {
                     if (this.removeOutput()) {
-                        machineBlock.removeItemNoUpdate(machineBlock.getInventorySize() - 1);
+                        baseBlockEntity.removeItemNoUpdate(baseBlockEntity.getInventorySize() - 1);
                     }
-                    Containers.dropContents(level, pos, machineBlock);
+                    Containers.dropContents(level, pos, baseBlockEntity);
                     level.updateNeighbourForOutputSignal(pos, this);
                 }
             }
