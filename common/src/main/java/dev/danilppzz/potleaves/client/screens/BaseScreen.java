@@ -1,8 +1,8 @@
 package dev.danilppzz.potleaves.client.screens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.vertex.PoseStack;
 import dev.danilppzz.potleaves.PotLeaves;
-import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
@@ -27,7 +27,7 @@ public class BaseScreen<T extends AbstractContainerMenu> extends AbstractContain
     }
 
     @Override
-    protected void renderBg(GuiGraphics guiGraphics, float f, int i, int j) {
+    protected void renderBg(PoseStack poseStack, float f, int i, int j) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, TEXTURE);
@@ -35,12 +35,12 @@ public class BaseScreen<T extends AbstractContainerMenu> extends AbstractContain
         int x = (width - textureWidth) / 2 + widthExtra;
         int y = (height - textureHeight) / 2 + heightExtra;
 
-        guiGraphics.blit(TEXTURE, x, y, 0, 0, textureWidth, textureHeight);
+        blit(poseStack, x, y, 0, 0, textureWidth, textureHeight);
     }
 
     @Override
-    public void render(GuiGraphics guiGraphics, int i, int j, float f) {
-        super.render(guiGraphics, i, j, f);
-        renderTooltip(guiGraphics, i, j);
+    public void render(PoseStack poseStack, int i, int j, float f) {
+        super.render(poseStack, i, j, f);
+        renderTooltip(poseStack, i, j);
     }
 }

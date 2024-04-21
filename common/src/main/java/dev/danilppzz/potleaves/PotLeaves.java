@@ -10,6 +10,5 @@ public class PotLeaves {
         ModItems.ITEMS.register();
         ModBlockEntity.BLOCK_ENTITIES.register();
         ModMenus.MENUS.register();
-        ModTabs.TABS.register();
     }
 }

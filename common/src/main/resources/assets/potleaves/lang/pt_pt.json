@@ -1,12 +1,12 @@
 {
-  "itemGroup.potleaves": "Folhas de pote",
+  "itemGroup.potleaves.potleaves": "Folhas de pote",
   "block.potleaves.wooden_pot": "Pote de madeira",
   "block.potleaves.small_leave_pot": "Pote pequeno de folhas",
   "block.potleaves.big_leave_pot": "Pote grande de folhas",
   "block.potleaves.wooden_box": "Caixa de madeira",
   "block.potleaves.slim_wooden_pot": "Pote fino de madeira",
-  "block.potleaves.cactus_pot": "Pote fino com cacto",
-  "block.potleaves.pink_cactus_pot": "Pote fino com cacto rosa",
+  "block.potleaves.slim_cactus_pot": "Pote fino com cacto",
+  "block.potleaves.slim_pink_cactus_pot": "Pote fino com cacto rosa",
   "block.potleaves.mini_leave_pot": "Mini pote de folhas",
   "block.potleaves.large_wooden_pot": "Pote grande de madeira",
   "block.potleaves.large_leave_pot_1": "Pote grande de folhas 1"
