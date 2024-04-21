@@ -5,6 +5,7 @@ import dev.danilppzz.potleaves.register.ModBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -34,5 +35,10 @@ public class WoodenBox extends BlockEntityBase {
     @Override
     public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
         return ModBlockEntity.WOODEN_BOX.get().create(blockPos, blockState);
+    }
+
+    @Override
+    public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos) {
+        return !levelReader.getBlockState(blockPos.below()).isAir();
     }
 }

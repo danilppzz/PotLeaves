@@ -2,6 +2,7 @@ package dev.danilppzz.potleaves.blocks.base;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -27,5 +28,10 @@ public class PotBase extends BlockBase {
     @Override
     public @NotNull VoxelShape getVisualShape(BlockState p_60479_, BlockGetter p_60480_, BlockPos p_60481_, CollisionContext p_60482_) {
         return Shapes.empty();
+    }
+
+    @Override
+    public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos) {
+        return !levelReader.getBlockState(blockPos.below()).isAir();
     }
 }
