@@ -1,5 +1,6 @@
 package dev.danilppzz.potleaves.blocks;
 
+import dev.danilppzz.potleaves.blocks.base.BlockEntityBase;
 import dev.danilppzz.potleaves.register.ModBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -12,14 +13,16 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class WoodenBox extends AbstractEntityBlock {
+@SuppressWarnings("deprecation")
+public class WoodenBox extends BlockEntityBase {
+
     public WoodenBox(Properties properties) {
         super(properties.dynamicShape().noOcclusion());
     }
 
     @Override
-    public @NotNull VoxelShape getShape(BlockState p_60555_, BlockGetter p_60556_, BlockPos p_60557_, CollisionContext p_60558_) {
-        Direction direction = p_60555_.getValue(FACING);
+    public @NotNull VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
+        Direction direction = blockState.getValue(FACING);
         if (direction != Direction.NORTH && direction != Direction.SOUTH) {
             return Block.box(4,0,2,12,7,14);
         }
