@@ -1,12 +1,12 @@
 {
-  "itemGroup.potleaves": "Листья горшка",
+  "itemGroup.potleaves.potleaves": "Листья горшка",
   "block.potleaves.wooden_pot": "Деревянный горшок",
   "block.potleaves.small_leave_pot": "Маленький горшок с листьями",
   "block.potleaves.big_leave_pot": "Большой горшок с листьями",
   "block.potleaves.wooden_box": "Деревянный ящик",
   "block.potleaves.slim_wooden_pot": "Узкий деревянный горшок",
-  "block.potleaves.cactus_pot": "Узкий горшок с кaktусом",
-  "block.potleaves.pink_cactus_pot": "Узкий горшок с розовым кaktусом",
+  "block.potleaves.slim_cactus_pot": "Узкий горшок с кaktусом",
+  "block.potleaves.slim_pink_cactus_pot": "Узкий горшок с розовым кaktусом",
   "block.potleaves.mini_leave_pot": "Мини горшок с листьями",
   "block.potleaves.large_wooden_pot": "Большой деревянный горшок",
   "block.potleaves.large_leave_pot_1": "Большой горшок с крупными листьями 1"

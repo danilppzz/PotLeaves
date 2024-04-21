@@ -9,7 +9,7 @@ import net.minecraft.world.inventory.Slot;
 public class WoodenBoxMenu extends BaseMenu<WoodenBoxBlockEntity> {
     
     public WoodenBoxMenu(int syncId, Inventory inventory, FriendlyByteBuf buf) {
-        this(syncId, inventory, (WoodenBoxBlockEntity) inventory.player.level().getBlockEntity(buf.readBlockPos()));
+        this(syncId, inventory, (WoodenBoxBlockEntity) inventory.player.level.getBlockEntity(buf.readBlockPos()));
     }
 
     public WoodenBoxMenu(int syncId, Inventory inventory, WoodenBoxBlockEntity blockEntity) {

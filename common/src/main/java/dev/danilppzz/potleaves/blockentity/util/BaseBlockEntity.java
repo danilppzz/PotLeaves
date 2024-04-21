@@ -9,6 +9,7 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.WorldlyContainer;
 import net.minecraft.world.item.ItemStack;
@@ -34,7 +35,7 @@ public abstract class BaseBlockEntity extends BlockEntity implements ModInventor
 
     @Override
     public Component getDisplayName() {
-        return Component.empty();
+        return new TextComponent("");
     }
 
     @Override

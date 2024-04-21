@@ -1,12 +1,12 @@
 {
-  "itemGroup.potleaves": "Blättertopf",
+  "itemGroup.potleaves.potleaves": "Blättertopf",
   "block.potleaves.wooden_pot": "Holztopf",
   "block.potleaves.small_leave_pot": "Kleiner Blättertopf",
   "block.potleaves.big_leave_pot": "Großer Blättertopf",
   "block.potleaves.wooden_box": "Holzkiste",
   "block.potleaves.slim_wooden_pot": "Schlanker Holztopf",
-  "block.potleaves.cactus_pot": "Schlanker Kaktustopf",
-  "block.potleaves.pink_cactus_pot": "Schlanker Rosa Kaktustopf",
+  "block.potleaves.slim_cactus_pot": "Schlanker Kaktustopf",
+  "block.potleaves.slim_pink_cactus_pot": "Schlanker Rosa Kaktustopf",
   "block.potleaves.mini_leave_pot": "Mini Holztopf",
   "block.potleaves.large_wooden_pot": "Großer Holztopf",
   "block.potleaves.large_leave_pot_1": "Großer Blättertopf"
