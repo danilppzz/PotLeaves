@@ -28,9 +28,9 @@ public class ModBlocks {
             () -> new WoodenBox(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.BAMBOO_WOOD)));
 
     // Cactus
-    public static final RegistrySupplier<WoodenPot> SLIM_CACTUS_POT = registerBlock("cactus_pot",
+    public static final RegistrySupplier<WoodenPot> SLIM_CACTUS_POT = registerBlock("slim_cactus_pot",
             () -> new WoodenPot(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.BAMBOO_WOOD)));
-    public static final RegistrySupplier<WoodenPot> SLIM_PINK_CACTUS_POT = registerBlock("pink_cactus_pot",
+    public static final RegistrySupplier<WoodenPot> SLIM_PINK_CACTUS_POT = registerBlock("slim_pink_cactus_pot",
             () -> new WoodenPot(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.BAMBOO_WOOD)));
 
     // Large Pot
@@ -56,7 +56,7 @@ public class ModBlocks {
         return toReturn;
     }
 
-    private static <T extends Block> RegistrySupplier<Item> registerBlockItem(String name, RegistrySupplier<T> block) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    private static <T extends Block> void registerBlockItem(String name, RegistrySupplier<T> block) {
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 }
