@@ -1,9 +1,9 @@
 {
-	"credit": "Made with Blockbench",
+	"credit": "Made by danilppzz",
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "potleaves:block/wooden_pot",
-		"3": "potleaves:block/cactus_pot",
+		"3": "potleaves:block/slim_cactus_pot",
 		"4": "potleaves:block/flower_1",
 		"particle": "potleaves:block/leaves_1"
 	},
