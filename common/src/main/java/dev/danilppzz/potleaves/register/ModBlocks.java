@@ -48,6 +48,8 @@ public class ModBlocks {
             () -> new WoodenPot(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).sound(SoundType.BAMBOO_WOOD)));
     public static final RegistrySupplier<WoodenPot> MINI_WOODEN_POT = registerBlock("mini_leave_pot",
             () -> new WoodenPot(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).sound(SoundType.BAMBOO_WOOD)));
+    public static final RegistrySupplier<WoodenPot> ALOE_VERA_POT = registerBlock("aloe_vera_pot",
+            () -> new WoodenPot(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).sound(SoundType.BAMBOO_WOOD)));
 
     // Register this blocks as items to.
     private static <T extends Block> RegistrySupplier<T> registerBlock(String name, Supplier<T> block) {

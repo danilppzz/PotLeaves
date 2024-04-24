@@ -16,7 +16,8 @@ public class PotLeavesClient {
                 ModBlocks.BIG_LEAVE_POT.get(),
                 ModBlocks.SMALL_LEAVE_POT.get(),
                 ModBlocks.LARGE_LEAVE_POT_1.get(),
-                ModBlocks.LARGE_WOODEN_POT.get());
+                ModBlocks.LARGE_WOODEN_POT.get(),
+                ModBlocks.ALOE_VERA_POT.get());
 
         MenuRegistry.registerScreenFactory(ModMenus.WOODEN_BOX.get(), WoodenBoxScreen::new);
     }
