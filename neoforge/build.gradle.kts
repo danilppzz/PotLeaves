@@ -9,7 +9,6 @@ plugins {
 
 val minecraftVersion: String by extra
 val neoforgeVersion: String by extra
-val neoforgeLoaderRange: String by extra
 val modVersion: String by extra
 val architecturyVersion: String by extra
 
@@ -39,10 +38,10 @@ dependencies {
 }
 
 tasks.withType<ProcessResources> {
-    val replaceProperties = mapOf("neoforgeLoaderRange" to neoforgeLoaderRange, "minecraftVersion" to minecraftVersion, "modVersion" to modVersion)
+    val replaceProperties = mapOf("minecraftVersion" to minecraftVersion, "modVersion" to modVersion)
     inputs.properties(replaceProperties)
 
-    filesMatching("META-INF/mods.toml") {
+    filesMatching("META-INF/neoforge.mods.toml") {
         expand(replaceProperties)
     }
 }
