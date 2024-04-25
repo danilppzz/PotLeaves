@@ -16,7 +16,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-@SuppressWarnings("deprecation")
 public class WoodenBox extends BlockEntityBase {
     private static final MapCodec<WoodenBox> CODEC = simpleCodec(WoodenBox::new);
 
