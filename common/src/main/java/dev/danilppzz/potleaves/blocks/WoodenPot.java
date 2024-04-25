@@ -9,7 +9,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
-@SuppressWarnings("deprecation")
 public class WoodenPot extends PotBase {
 
     public WoodenPot(Properties properties) {

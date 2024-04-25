@@ -5,11 +5,8 @@ import dev.architectury.registry.menu.MenuRegistry;
 import dev.danilppzz.potleaves.blockentity.util.BaseBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -27,7 +24,6 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 
-@SuppressWarnings("deprecation")
 public abstract class BlockEntityBase extends BaseEntityBlock {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
@@ -60,9 +56,9 @@ public abstract class BlockEntityBase extends BaseEntityBlock {
     }
 
     @Override
-    public @NotNull InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    protected @NotNull InteractionResult useWithoutItem(BlockState blockState, Level level, BlockPos blockPos, Player player, BlockHitResult blockHitResult) {
         if (!level.isClientSide) {
-            if (level.getBlockEntity(pos) instanceof ExtendedMenuProvider menu) {
+            if (level.getBlockEntity(blockPos) instanceof ExtendedMenuProvider menu) {
                 MenuRegistry.openExtendedMenu((ServerPlayer) player, menu);
             }
         }
@@ -138,11 +134,10 @@ public abstract class BlockEntityBase extends BaseEntityBlock {
 
     @Override
     public @NotNull ItemStack getCloneItemStack(LevelReader levelReader, BlockPos blockPos, BlockState blockState) {
-        ItemStack stack = super.getCloneItemStack(levelReader, blockPos, blockState);
-        if (levelReader.getBlockEntity(blockPos) instanceof BaseBlockEntity machineBlock) {
-            CompoundTag tag = stack.getOrCreateTag();
-            ContainerHelper.saveAllItems(tag, machineBlock.getItems());
-        }
-        return stack;
+        //if (levelReader.getBlockEntity(blockPos) instanceof BaseBlockEntity machineBlock) { TODO: Fix this
+        //    CompoundTag tag = stack.getOrCreateTag();
+        //    ContainerHelper.saveAllItems(tag, machineBlock.getItems());
+        //}
+        return super.getCloneItemStack(levelReader, blockPos, blockState);
     }
 }

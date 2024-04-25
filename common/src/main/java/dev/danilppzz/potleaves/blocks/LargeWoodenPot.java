@@ -11,7 +11,6 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
-@SuppressWarnings("deprecation")
 public class LargeWoodenPot extends BlockBase {
 
     public LargeWoodenPot(Properties properties) {
