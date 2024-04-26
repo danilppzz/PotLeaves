@@ -3,14 +3,14 @@
   "category": "misc",
   "pattern": [
     "   ",
-    "12 ",
+    "AB ",
     "   "
   ],
   "key": {
-    "2": {
+    "B": {
       "item": "minecraft:cactus"
     },
-    "1": {
+    "A": {
       "item": "potleaves:slim_wooden_pot"
     }
   },

@@ -3,17 +3,17 @@
   "category": "misc",
   "pattern": [
     "   ",
-    "223",
-    " 1 "
+    "BBC",
+    " A "
   ],
   "key": {
-    "3": {
+    "C": {
       "item": "minecraft:allium"
     },
-    "2": {
-      "item": "minecraft:grass"
+    "B": {
+      "item": "minecraft:short_grass"
     },
-    "1": {
+    "A": {
       "item": "potleaves:large_wooden_pot"
     }
   },

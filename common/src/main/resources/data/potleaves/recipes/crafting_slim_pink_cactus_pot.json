@@ -2,18 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    " 3 ",
-    "12 ",
+    " C ",
+    "AB ",
     "   "
   ],
   "key": {
-    "3": {
+    "C": {
       "item": "minecraft:magenta_dye"
     },
-    "2": {
+    "B": {
       "item": "minecraft:cactus"
     },
-    "1": {
+    "A": {
       "item": "potleaves:slim_wooden_pot"
     }
   },
