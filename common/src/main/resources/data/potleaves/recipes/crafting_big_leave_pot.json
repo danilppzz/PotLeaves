@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "1  ",
-    "2  ",
+    "AAA",
+    "B  ",
     "   "
   ],
   "key": {
-    "2": {
+    "B": {
       "item": "potleaves:wooden_pot"
     },
-    "1": {
-      "item": "minecraft:oak_sapling"
+    "A": {
+      "item": "minecraft:short_grass"
     }
   },
   "result": {
-    "item": "potleaves:mini_leave_pot"
+    "item": "potleaves:big_leave_pot"
   }
 }

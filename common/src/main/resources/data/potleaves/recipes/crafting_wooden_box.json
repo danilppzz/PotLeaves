@@ -2,15 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "1 1",
-    "1 1",
-    "222"
+    "A A",
+    "A A",
+    "BBB"
   ],
   "key": {
-    "2": {
+    "B": {
       "item": "minecraft:spruce_slab"
     },
-    "1": {
+    "A": {
       "item": "minecraft:stick"
     }
   },

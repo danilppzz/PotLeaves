@@ -3,17 +3,17 @@
   "category": "misc",
   "pattern": [
     "   ",
-    "212",
-    "333"
+    "BAB",
+    "CCC"
   ],
   "key": {
-    "3": {
+    "C": {
       "item": "minecraft:spruce_planks"
     },
-    "2": {
+    "B": {
       "item": "minecraft:stick"
     },
-    "1": {
+    "A": {
       "item": "minecraft:dirt"
     }
   },
