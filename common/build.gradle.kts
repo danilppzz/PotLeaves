@@ -6,6 +6,8 @@ dependencies {
     modApi("dev.architectury:architectury:$architecturyVersion")
 }
 
+sourceSets.main.get().resources.srcDir("src/main/generated/resources")
+
 architectury {
     common("fabric", "neoforge")
 }
