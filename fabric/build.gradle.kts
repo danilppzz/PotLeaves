@@ -47,6 +47,9 @@ tasks.withType<ProcessResources> {
 }
 
 tasks.withType<ShadowJar> {
+    exclude(".cache/**")
+    exclude("**/potleaves/datagen/**")
+
     configurations = listOf(shadowCommon)
     archiveClassifier.set("dev-shadow")
 }

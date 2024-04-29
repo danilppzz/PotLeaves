@@ -17,6 +17,18 @@ architectury {
     neoForge()
 }
 
+loom {
+    runs {
+        create("data") {
+            data()
+            programArgs("--mod", "potleaves")
+            programArgs("--all")
+            programArgs("--output", project(":common").file("src/main/generated/resources").absolutePath)
+            programArgs("--existing", project(":common").file("src/main/resources").absolutePath)
+        }
+    }
+}
+
 val common by configurations.creating
 val shadowCommon by configurations.creating
 
@@ -48,6 +60,8 @@ tasks.withType<ProcessResources> {
 
 tasks.withType<ShadowJar> {
     exclude("fabric.mod.json")
+    exclude(".cache/**")
+    exclude("**/potleaves/datagen/**")
 
     configurations = listOf(shadowCommon)
     archiveClassifier.set("dev-shadow")

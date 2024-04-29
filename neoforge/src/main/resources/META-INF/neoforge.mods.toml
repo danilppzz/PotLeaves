@@ -21,21 +21,21 @@ Some of them have special functions like attracting some mobs/animals, or other 
 
 [[dependencies.potleaves]]
 modId="neoforge"
-mandatory=true
+type="required"
 versionRange="[0,)"
 ordering="NONE"
 side="BOTH"
 
 [[dependencies.potleaves]]
 modId="minecraft"
-mandatory=true
+type="required"
 versionRange="[${minecraftVersion}]"
 ordering="NONE"
 side="BOTH"
 
 [[dependencies.potleaves]]
 modId="architectury"
-mandatory=true
+type="required"
 versionRange="[0,)"
 ordering="NONE"
 side="BOTH"
