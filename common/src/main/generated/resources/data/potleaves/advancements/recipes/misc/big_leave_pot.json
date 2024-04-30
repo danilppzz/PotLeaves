@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_big_leave_pot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "potleaves:wooden_pot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "potleaves:big_leave_pot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_big_leave_pot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "potleaves:big_leave_pot"
+    ]
+  }
+}

@@ -1,5 +1,6 @@
-package dev.danilppzz.potleaves;
+package dev.danilppzz.potleaves.neoforge;
 
+import dev.danilppzz.potleaves.PotLeaves;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 
