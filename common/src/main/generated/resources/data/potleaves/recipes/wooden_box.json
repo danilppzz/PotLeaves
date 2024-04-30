@@ -1,20 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "pattern": [
-    "A A",
-    "A A",
-    "BBB"
-  ],
   "key": {
-    "B": {
+    "#": {
       "item": "minecraft:spruce_slab"
     },
     "A": {
       "item": "minecraft:stick"
     }
   },
+  "pattern": [
+    "A A",
+    "A A",
+    "###"
+  ],
   "result": {
-    "item": "potleaves:wooden_box"
+    "count": 1,
+    "id": "potleaves:wooden_box"
   }
 }
