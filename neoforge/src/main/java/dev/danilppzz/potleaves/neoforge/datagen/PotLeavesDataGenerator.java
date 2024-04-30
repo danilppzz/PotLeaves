@@ -1,7 +1,7 @@
-package dev.danilppzz.potleaves.datagen;
+package dev.danilppzz.potleaves.neoforge.datagen;
 
 import dev.danilppzz.potleaves.PotLeaves;
-import dev.danilppzz.potleaves.datagen.provider.server.ModRecipeProvider;
+import dev.danilppzz.potleaves.neoforge.datagen.provider.server.ModRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;

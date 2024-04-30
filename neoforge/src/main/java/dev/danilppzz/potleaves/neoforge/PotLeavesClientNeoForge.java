@@ -1,5 +1,6 @@
-package dev.danilppzz.potleaves;
+package dev.danilppzz.potleaves.neoforge;
 
+import dev.danilppzz.potleaves.PotLeaves;
 import dev.danilppzz.potleaves.client.PotLeavesClient;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
