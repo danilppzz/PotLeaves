@@ -1,4 +1,4 @@
-package dev.danilppzz.potleaves.datagen.provider;
+package dev.danilppzz.potleaves.datagen.provider.server;
 
 import dev.danilppzz.potleaves.register.ModBlocks;
 import net.minecraft.core.HolderLookup;
