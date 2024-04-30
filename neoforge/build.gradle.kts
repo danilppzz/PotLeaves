@@ -4,7 +4,7 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import net.fabricmc.loom.task.RemapJarTask
 
 plugins {
-    id("com.github.johnrengelman.shadow") version "7.1.2"
+    id("com.github.johnrengelman.shadow")
 }
 
 val minecraftVersion: String by extra
@@ -21,10 +21,7 @@ loom {
     runs {
         create("data") {
             data()
-            programArgs("--mod", "potleaves")
-            programArgs("--all")
-            programArgs("--output", project(":common").file("src/main/generated/resources").absolutePath)
-            programArgs("--existing", project(":common").file("src/main/resources").absolutePath)
+            programArgs("--mod", "potleaves", "--all", "--output", project(":common").file("src/main/generated/resources").absolutePath, "--existing", project(":common").file("src/main/resources").absolutePath)
         }
     }
 }
@@ -59,7 +56,6 @@ tasks.withType<ProcessResources> {
 }
 
 tasks.withType<ShadowJar> {
-    exclude("fabric.mod.json")
     exclude(".cache/**")
     exclude("**/potleaves/datagen/**")
 
@@ -70,22 +66,4 @@ tasks.withType<ShadowJar> {
 tasks.withType<RemapJarTask> {
     val shadowTask = tasks.shadowJar.get()
     input.set(shadowTask.archiveFile)
-    dependsOn(shadowTask)
-    archiveClassifier.set("")
-}
-
-tasks.jar {
-    archiveClassifier.set("dev")
-}
-
-tasks.sourcesJar {
-    val commonSources = project(":common").tasks.sourcesJar.get()
-    dependsOn(commonSources)
-    from(commonSources.archiveFile.map { zipTree(it) })
-}
-
-components.getByName<AdhocComponentWithVariants>("java").apply {
-    withVariantsFromConfiguration(project.configurations["shadowRuntimeElements"]) {
-        skip()
-    }
 }

@@ -1,7 +1,7 @@
 package dev.danilppzz.potleaves.datagen;
 
 import dev.danilppzz.potleaves.PotLeaves;
-import dev.danilppzz.potleaves.datagen.provider.ModRecipeProvider;
+import dev.danilppzz.potleaves.datagen.provider.server.ModRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -12,6 +12,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.concurrent.CompletableFuture;
 
+@SuppressWarnings("unused")
 @EventBusSubscriber(modid = PotLeaves.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class PotLeavesDataGenerator {
     
