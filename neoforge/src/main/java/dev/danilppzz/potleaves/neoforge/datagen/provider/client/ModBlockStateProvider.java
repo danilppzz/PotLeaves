@@ -15,17 +15,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        horizontalBlock(ModBlocks.ALOE_VERA_POT);
-        horizontalBlock(ModBlocks.BIG_LEAVE_POT);
-        horizontalBlock(ModBlocks.LARGE_LEAVE_POT_1);
+        horizontalBlock(ModBlocks.ALOE_VERA_WOODEN_POT);
+        horizontalBlock(ModBlocks.BIG_LEAVE_WOODEN_POT);
+        horizontalBlock(ModBlocks.LARGE_LEAVE_WOODEN_POT);
         horizontalBlock(ModBlocks.LARGE_WOODEN_POT);
         horizontalBlock(ModBlocks.MINI_WOODEN_POT);
-        horizontalBlock(ModBlocks.SLIM_CACTUS_POT);
-        horizontalBlock(ModBlocks.SLIM_PINK_CACTUS_POT);
+        horizontalBlock(ModBlocks.CACTUS_WOODEN_POT);
+        horizontalBlock(ModBlocks.PINK_CACTUS_WOODEN_POT);
         horizontalBlock(ModBlocks.SLIM_WOODEN_POT);
-        horizontalBlock(ModBlocks.SMALL_LEAVE_POT);
+        horizontalBlock(ModBlocks.SMALL_LEAVE_WOODEN_POT);
+        horizontalBlock(ModBlocks.ALOE_VERA_MARMOL_POT);
+        horizontalBlock(ModBlocks.BIG_LEAVE_MARMOL_POT);
+        horizontalBlock(ModBlocks.MINI_MARMOL_POT);
+        horizontalBlock(ModBlocks.CACTUS_MARMOL_POT);
+        horizontalBlock(ModBlocks.PINK_CACTUS_MARMOL_POT);
+        horizontalBlock(ModBlocks.SMALL_LEAVE_MARMOL_POT);
         horizontalBlock(ModBlocks.WOODEN_BOX);
         horizontalBlock(ModBlocks.WOODEN_POT);
+        horizontalBlock(ModBlocks.MARMOL_POT);
+        
     }
     
     private void horizontalBlock(RegistrySupplier<? extends Block> block) {

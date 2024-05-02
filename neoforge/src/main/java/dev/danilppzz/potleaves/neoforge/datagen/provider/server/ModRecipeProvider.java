@@ -27,7 +27,7 @@ public class ModRecipeProvider extends RecipeProvider {
     protected void buildRecipes(@NotNull RecipeOutput arg) {
         this.output = arg;
         
-        shaped(ModBlocks.BIG_LEAVE_POT, 1, ModBlocks.WOODEN_POT.get(), shapedRecipeBuilder -> shapedRecipeBuilder
+        shaped(ModBlocks.BIG_LEAVE_WOODEN_POT, 1, ModBlocks.WOODEN_POT.get(), shapedRecipeBuilder -> shapedRecipeBuilder
                 .define('A', Blocks.SHORT_GRASS)
                 .pattern("AAA")
                 .pattern("#  "));
@@ -37,7 +37,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("A")
                 .pattern("#"));
         
-        shaped(ModBlocks.SLIM_CACTUS_POT, 1, ModBlocks.SLIM_WOODEN_POT.get(), shapedRecipeBuilder -> shapedRecipeBuilder
+        shaped(ModBlocks.CACTUS_WOODEN_POT, 1, ModBlocks.SLIM_WOODEN_POT.get(), shapedRecipeBuilder -> shapedRecipeBuilder
                 .define('A', Blocks.CACTUS)
                 .pattern("#A"));
         
@@ -47,7 +47,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("BAB")
                 .pattern("###"));
         
-        shaped(ModBlocks.SLIM_PINK_CACTUS_POT, 1, ModBlocks.WOODEN_POT.get(), shapedRecipeBuilder -> shapedRecipeBuilder
+        shaped(ModBlocks.PINK_CACTUS_WOODEN_POT, 1, ModBlocks.WOODEN_POT.get(), shapedRecipeBuilder -> shapedRecipeBuilder
                 .define('A', Blocks.CACTUS)
                 .define('B', Items.MAGENTA_DYE)
                 .pattern(" B")
@@ -64,12 +64,12 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("A A")
                 .pattern("###"));
         
-        shaped(ModBlocks.SMALL_LEAVE_POT, 1, ModBlocks.WOODEN_POT.get(), shapedRecipeBuilder -> shapedRecipeBuilder
+        shaped(ModBlocks.SMALL_LEAVE_WOODEN_POT, 1, ModBlocks.WOODEN_POT.get(), shapedRecipeBuilder -> shapedRecipeBuilder
                 .define('A', Blocks.SHORT_GRASS)
                 .pattern("A")
                 .pattern("#"));
         
-        shaped(ModBlocks.LARGE_LEAVE_POT_1, 1, ModBlocks.LARGE_WOODEN_POT.get(), shapedRecipeBuilder -> shapedRecipeBuilder
+        shaped(ModBlocks.LARGE_LEAVE_WOODEN_POT, 1, ModBlocks.LARGE_WOODEN_POT.get(), shapedRecipeBuilder -> shapedRecipeBuilder
                 .define('A', Blocks.SHORT_GRASS)
                 .define('B', Items.ALLIUM)
                 .pattern("AAB")
