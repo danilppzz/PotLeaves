@@ -1,11 +1,11 @@
 {
   "variants": {
-    "facing=north": {
-      "model": "potleaves:block/wooden_box"
-    },
     "facing=east": {
       "model": "potleaves:block/wooden_box",
-      "y": 270
+      "y": 90
+    },
+    "facing=north": {
+      "model": "potleaves:block/wooden_box"
     },
     "facing=south": {
       "model": "potleaves:block/wooden_box",
@@ -13,7 +13,7 @@
     },
     "facing=west": {
       "model": "potleaves:block/wooden_box",
-      "y": 90
+      "y": 270
     }
   }
 }
