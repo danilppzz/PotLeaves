@@ -3,6 +3,7 @@ package dev.danilppzz.potleaves.neoforge.datagen;
 import dev.danilppzz.potleaves.PotLeaves;
 import dev.danilppzz.potleaves.neoforge.datagen.provider.client.ModBlockStateProvider;
 import dev.danilppzz.potleaves.neoforge.datagen.provider.client.ModItemModelProvider;
+import dev.danilppzz.potleaves.neoforge.datagen.provider.server.ModLootTableProvider;
 import dev.danilppzz.potleaves.neoforge.datagen.provider.server.ModRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -27,6 +28,7 @@ public class PotLeavesDataGenerator {
         
         // Server
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new ModLootTableProvider(packOutput, lookupProvider));
         
         // Client
         generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
