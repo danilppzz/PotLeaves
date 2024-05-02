@@ -1,11 +1,11 @@
 {
   "variants": {
-    "facing=north": {
-      "model": "potleaves:block/large_leave_pot_1"
-    },
     "facing=east": {
       "model": "potleaves:block/large_leave_pot_1",
       "y": 90
+    },
+    "facing=north": {
+      "model": "potleaves:block/large_leave_pot_1"
     },
     "facing=south": {
       "model": "potleaves:block/large_leave_pot_1",
