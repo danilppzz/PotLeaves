@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "potleaves:block/cactus_marmol_pot",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "potleaves:block/cactus_marmol_pot"
+    },
+    "facing=south": {
+      "model": "potleaves:block/cactus_marmol_pot",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "potleaves:block/cactus_marmol_pot",
+      "y": 270
+    }
+  }
+}

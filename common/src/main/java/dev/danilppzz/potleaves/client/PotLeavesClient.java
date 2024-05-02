@@ -10,14 +10,21 @@ import net.minecraft.client.renderer.RenderType;
 public class PotLeavesClient {
     public static void init() {
         RenderTypeRegistry.register(RenderType.cutout(),
-                ModBlocks.SLIM_CACTUS_POT.get(),
-                ModBlocks.SLIM_PINK_CACTUS_POT.get(),
+                ModBlocks.CACTUS_WOODEN_POT.get(),
+                ModBlocks.PINK_CACTUS_WOODEN_POT.get(),
                 ModBlocks.MINI_WOODEN_POT.get(),
-                ModBlocks.BIG_LEAVE_POT.get(),
-                ModBlocks.SMALL_LEAVE_POT.get(),
-                ModBlocks.LARGE_LEAVE_POT_1.get(),
+                ModBlocks.BIG_LEAVE_WOODEN_POT.get(),
+                ModBlocks.SMALL_LEAVE_WOODEN_POT.get(),
+                ModBlocks.LARGE_LEAVE_WOODEN_POT.get(),
                 ModBlocks.LARGE_WOODEN_POT.get(),
-                ModBlocks.ALOE_VERA_POT.get());
+                ModBlocks.ALOE_VERA_WOODEN_POT.get(),
+                
+                ModBlocks.CACTUS_MARMOL_POT.get(),
+                ModBlocks.PINK_CACTUS_MARMOL_POT.get(),
+                ModBlocks.MINI_MARMOL_POT.get(),
+                ModBlocks.BIG_LEAVE_MARMOL_POT.get(),
+                ModBlocks.SMALL_LEAVE_MARMOL_POT.get(),
+                ModBlocks.ALOE_VERA_MARMOL_POT.get());
 
         MenuRegistry.registerScreenFactory(ModMenus.WOODEN_BOX.get(), WoodenBoxScreen::new);
     }
