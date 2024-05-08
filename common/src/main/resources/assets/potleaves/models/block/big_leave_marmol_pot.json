@@ -3,6 +3,7 @@
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "potleaves:block/marmol_pot",
+		"1": "potleaves:block/wooden_pot",
 		"2": "potleaves:block/leaves_1",
 		"particle": "potleaves:block/slim_wooden_pot"
 	},
@@ -431,12 +432,12 @@
 			"from": [7.7, 4.8, 7.5],
 			"to": [8.7, 17.8, 8.5],
 			"faces": {
-				"north": {"uv": [3.75, 0.75, 4, 4], "texture": "#0"},
-				"east": {"uv": [3.75, 0.75, 4, 4], "texture": "#0"},
-				"south": {"uv": [3.75, 0.75, 4, 4], "texture": "#0"},
-				"west": {"uv": [3.75, 0.75, 4, 4], "texture": "#0"},
-				"up": {"uv": [3, 0.75, 3.25, 1], "texture": "#0"},
-				"down": {"uv": [2.5, 1, 2.75, 1.25], "texture": "#0"}
+				"north": {"uv": [3.75, 0.75, 4, 4], "texture": "#1"},
+				"east": {"uv": [3.75, 0.75, 4, 4], "texture": "#1"},
+				"south": {"uv": [3.75, 0.75, 4, 4], "texture": "#1"},
+				"west": {"uv": [3.75, 0.75, 4, 4], "texture": "#1"},
+				"up": {"uv": [3, 0.75, 3.25, 1], "texture": "#1"},
+				"down": {"uv": [2.5, 1, 2.75, 1.25], "texture": "#1"}
 			}
 		}
 	],
