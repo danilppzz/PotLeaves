@@ -33,6 +33,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlock(ModBlocks.WOODEN_BOX);
         horizontalBlock(ModBlocks.WOODEN_POT);
         horizontalBlock(ModBlocks.MARMOL_POT);
+        horizontalBlock(ModBlocks.MUSA_WOODEN_POT);
+        horizontalBlock(ModBlocks.MUSA_MARMOL_POT);
         
     }
     

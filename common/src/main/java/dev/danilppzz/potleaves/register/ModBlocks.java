@@ -54,6 +54,9 @@ public class ModBlocks {
 
     public static final RegistrySupplier<Pot> ALOE_VERA_WOODEN_POT = registerPot("aloe_vera_", Pot.Type.WOODEN);
     public static final RegistrySupplier<Pot> ALOE_VERA_MARMOL_POT = registerPot("aloe_vera_", Pot.Type.MARMOL);
+    
+    public static final RegistrySupplier<Pot> MUSA_WOODEN_POT = registerPot("musa_", Pot.Type.WOODEN);
+    public static final RegistrySupplier<Pot> MUSA_MARMOL_POT = registerPot("musa_", Pot.Type.MARMOL);
 
     private static RegistrySupplier<Pot> registerPot(String name, Pot.Type type) {
         return registerBlock(name + type.extension, () -> new Pot(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).sound(type.soundType)));
