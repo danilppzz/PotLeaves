@@ -19,7 +19,7 @@ public class BaseScreen<T extends AbstractContainerMenu> extends AbstractContain
     
     public BaseScreen(T abstractContainerMenu, Inventory inventory, Component component, int width, int height, int widthExtra, int heightExtra, String textureName) {
         super(abstractContainerMenu, inventory, component);
-        this.TEXTURE = new ResourceLocation(PotLeaves.MOD_ID, "textures/gui/" + textureName + ".png");
+        this.TEXTURE = ResourceLocation.fromNamespaceAndPath(PotLeaves.MOD_ID, "textures/gui/" + textureName + ".png");
         this.textureWidth = width;
         this.textureHeight = height;
         this.widthExtra = widthExtra;
