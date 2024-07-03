@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "potleaves:wooden_box"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wooden_box": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:spruce_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_wooden_box"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "potleaves:wooden_box"
+    ]
+  }
+}
