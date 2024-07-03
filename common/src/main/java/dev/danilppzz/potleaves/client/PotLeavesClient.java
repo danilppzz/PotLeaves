@@ -8,7 +8,7 @@ import dev.danilppzz.potleaves.register.ModMenus;
 import net.minecraft.client.renderer.RenderType;
 
 public class PotLeavesClient {
-    public static void init() {
+    public static void init(boolean fabric) {
         RenderTypeRegistry.register(RenderType.cutout(),
                 ModBlocks.CACTUS_WOODEN_POT.get(),
                 ModBlocks.PINK_CACTUS_WOODEN_POT.get(),
@@ -28,6 +28,6 @@ public class PotLeavesClient {
                 ModBlocks.MUSA_WOODEN_POT.get(),
                 ModBlocks.MUSA_MARMOL_POT.get());
 
-        MenuRegistry.registerScreenFactory(ModMenus.WOODEN_BOX.get(), WoodenBoxScreen::new);
+        if (fabric) MenuRegistry.registerScreenFactory(ModMenus.WOODEN_BOX.get(), WoodenBoxScreen::new);
     }
 }

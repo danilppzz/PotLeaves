@@ -38,7 +38,7 @@ repositories {
 }
 
 dependencies {
-    neoForge("net.neoforged:neoforge:$neoforgeVersion-beta")
+    neoForge("net.neoforged:neoforge:$neoforgeVersion")
 
     modApi("dev.architectury:architectury-neoforge:$architecturyVersion")
     

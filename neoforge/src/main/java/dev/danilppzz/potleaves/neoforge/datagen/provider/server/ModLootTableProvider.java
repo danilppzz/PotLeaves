@@ -21,8 +21,8 @@ public class ModLootTableProvider extends LootTableProvider {
     }
     
     public static class BlockLootTables extends BlockLootSubProvider {
-        public BlockLootTables() {
-            super(Set.of(), FeatureFlags.REGISTRY.allFlags());
+        public BlockLootTables(HolderLookup.Provider provider) {
+            super(Set.of(), FeatureFlags.REGISTRY.allFlags(), provider);
         }
 
         @Override
