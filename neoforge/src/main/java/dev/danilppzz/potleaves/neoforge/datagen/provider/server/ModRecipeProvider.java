@@ -79,6 +79,14 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('A', Blocks.DIRT)
                 .pattern("#A#")
                 .pattern(" # "));
+
+        shaped(ModBlocks.CACTUS_DESERT_POT, 1, Items.BRICK, shapedRecipeBuilder -> shapedRecipeBuilder
+                .define('A', Blocks.CACTUS)
+                .define('B', Blocks.SAND)
+                .define('C', Items.GOLD_INGOT)
+                .pattern(" A ")
+                .pattern("#B#")
+                .pattern("#C#"));
     }
     
     private void shaped(RegistrySupplier<? extends ItemLike> result, int count, ItemLike main, Function<ShapedRecipeBuilder, ShapedRecipeBuilder> builder) {

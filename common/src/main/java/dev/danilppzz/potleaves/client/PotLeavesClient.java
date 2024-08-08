@@ -26,7 +26,9 @@ public class PotLeavesClient {
                 ModBlocks.SMALL_LEAVE_MARMOL_POT.get(),
                 ModBlocks.ALOE_VERA_MARMOL_POT.get(),
                 ModBlocks.MUSA_WOODEN_POT.get(),
-                ModBlocks.MUSA_MARMOL_POT.get());
+                ModBlocks.MUSA_MARMOL_POT.get(),
+
+                ModBlocks.CACTUS_DESERT_POT.get());
 
         if (fabric) MenuRegistry.registerScreenFactory(ModMenus.WOODEN_BOX.get(), WoodenBoxScreen::new);
     }

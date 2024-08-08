@@ -23,7 +23,8 @@ public class Pot extends PotBase {
 
     public enum Type {
         WOODEN("wooden_pot", SoundType.BAMBOO_WOOD),
-        MARMOL("marmol_pot", SoundType.STONE);
+        MARMOL("marmol_pot", SoundType.STONE),
+        DESERT("desert_pot", SoundType.STONE);
         
         public final String extension;
         public final SoundType soundType;
