@@ -34,32 +34,37 @@ public class ModBlocks {
             () -> new LargeWoodenPot(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).sound(SoundType.BAMBOO_WOOD)));
 
     // Normal Pots
-    public static final RegistrySupplier<Pot> CACTUS_WOODEN_POT = registerPot("cactus_", Pot.Type.WOODEN);
-    public static final RegistrySupplier<Pot> CACTUS_MARMOL_POT = registerPot("cactus_", Pot.Type.MARMOL);
+    public static final RegistrySupplier<Pot> CACTUS_WOODEN_POT = registerPot("cactus", Pot.Type.WOODEN);
+    public static final RegistrySupplier<Pot> CACTUS_MARMOL_POT = registerPot("cactus", Pot.Type.MARMOL);
+    public static final RegistrySupplier<Pot> CACTUS_DESERT_POT = registerPot("cactus", Pot.Type.DESERT);
 
-    public static final RegistrySupplier<Pot> PINK_CACTUS_WOODEN_POT = registerPot("pink_cactus_", Pot.Type.WOODEN);
-    public static final RegistrySupplier<Pot> PINK_CACTUS_MARMOL_POT = registerPot("pink_cactus_", Pot.Type.MARMOL);
+    public static final RegistrySupplier<Pot> PINK_CACTUS_WOODEN_POT = registerPot("pink_cactus", Pot.Type.WOODEN);
+    public static final RegistrySupplier<Pot> PINK_CACTUS_MARMOL_POT = registerPot("pink_cactus", Pot.Type.MARMOL);
 
-    public static final RegistrySupplier<Pot> WOODEN_POT = registerPot("", Pot.Type.WOODEN);
-    public static final RegistrySupplier<Pot> MARMOL_POT = registerPot("", Pot.Type.MARMOL);
+    public static final RegistrySupplier<Pot> WOODEN_POT = registerSinglePot("wooden_pot", Pot.Type.WOODEN);
+    public static final RegistrySupplier<Pot> MARMOL_POT = registerSinglePot("marmol_pot", Pot.Type.MARMOL);
 
-    public static final RegistrySupplier<Pot> SMALL_LEAVE_WOODEN_POT = registerPot("small_leave_", Pot.Type.WOODEN);
-    public static final RegistrySupplier<Pot> SMALL_LEAVE_MARMOL_POT = registerPot("small_leave_", Pot.Type.MARMOL);
+    public static final RegistrySupplier<Pot> SMALL_LEAVE_WOODEN_POT = registerPot("small_leave", Pot.Type.WOODEN);
+    public static final RegistrySupplier<Pot> SMALL_LEAVE_MARMOL_POT = registerPot("small_leave", Pot.Type.MARMOL);
 
-    public static final RegistrySupplier<Pot> BIG_LEAVE_WOODEN_POT = registerPot("big_leave_", Pot.Type.WOODEN);
-    public static final RegistrySupplier<Pot> BIG_LEAVE_MARMOL_POT = registerPot("big_leave_", Pot.Type.MARMOL);
+    public static final RegistrySupplier<Pot> BIG_LEAVE_WOODEN_POT = registerPot("big_leave", Pot.Type.WOODEN);
+    public static final RegistrySupplier<Pot> BIG_LEAVE_MARMOL_POT = registerPot("big_leave", Pot.Type.MARMOL);
 
-    public static final RegistrySupplier<Pot> MINI_WOODEN_POT = registerPot("mini_leave_", Pot.Type.WOODEN);
-    public static final RegistrySupplier<Pot> MINI_MARMOL_POT = registerPot("mini_leave_", Pot.Type.MARMOL);
+    public static final RegistrySupplier<Pot> MINI_WOODEN_POT = registerPot("mini_leave", Pot.Type.WOODEN);
+    public static final RegistrySupplier<Pot> MINI_MARMOL_POT = registerPot("mini_leave", Pot.Type.MARMOL);
 
-    public static final RegistrySupplier<Pot> ALOE_VERA_WOODEN_POT = registerPot("aloe_vera_", Pot.Type.WOODEN);
-    public static final RegistrySupplier<Pot> ALOE_VERA_MARMOL_POT = registerPot("aloe_vera_", Pot.Type.MARMOL);
+    public static final RegistrySupplier<Pot> ALOE_VERA_WOODEN_POT = registerPot("aloe_vera", Pot.Type.WOODEN);
+    public static final RegistrySupplier<Pot> ALOE_VERA_MARMOL_POT = registerPot("aloe_vera", Pot.Type.MARMOL);
     
-    public static final RegistrySupplier<Pot> MUSA_WOODEN_POT = registerPot("musa_", Pot.Type.WOODEN);
-    public static final RegistrySupplier<Pot> MUSA_MARMOL_POT = registerPot("musa_", Pot.Type.MARMOL);
+    public static final RegistrySupplier<Pot> MUSA_WOODEN_POT = registerPot("musa", Pot.Type.WOODEN);
+    public static final RegistrySupplier<Pot> MUSA_MARMOL_POT = registerPot("musa", Pot.Type.MARMOL);
 
+    private static RegistrySupplier<Pot> registerSinglePot(String name, Pot.Type type) {
+        return registerBlock(name, () -> new Pot(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).sound(type.soundType)));
+    }
+    
     private static RegistrySupplier<Pot> registerPot(String name, Pot.Type type) {
-        return registerBlock(name + type.extension, () -> new Pot(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).sound(type.soundType)));
+        return registerBlock(name + "_" + type.extension, () -> new Pot(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).sound(type.soundType)));
     }
     
     // Register this blocks as items to.

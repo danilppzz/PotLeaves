@@ -35,6 +35,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlock(ModBlocks.MARMOL_POT);
         horizontalBlock(ModBlocks.MUSA_WOODEN_POT);
         horizontalBlock(ModBlocks.MUSA_MARMOL_POT);
+        horizontalBlock(ModBlocks.CACTUS_DESERT_POT);
         
     }
     
