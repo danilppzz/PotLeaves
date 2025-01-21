@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "potleaves:large_wooden_pot"
+  },
+  "result": {
+    "count": 1,
+    "id": "potleaves:large_leave_wooden_pot"
+  }
+}

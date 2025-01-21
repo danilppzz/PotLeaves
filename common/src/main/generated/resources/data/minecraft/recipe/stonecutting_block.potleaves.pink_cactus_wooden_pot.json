@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "potleaves:wooden_pot"
+  },
+  "result": {
+    "count": 1,
+    "id": "potleaves:pink_cactus_wooden_pot"
+  }
+}

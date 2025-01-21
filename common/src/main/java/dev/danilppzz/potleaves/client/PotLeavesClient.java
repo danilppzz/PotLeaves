@@ -18,6 +18,7 @@ public class PotLeavesClient {
                 ModBlocks.LARGE_LEAVE_WOODEN_POT.get(),
                 ModBlocks.LARGE_WOODEN_POT.get(),
                 ModBlocks.ALOE_VERA_WOODEN_POT.get(),
+                ModBlocks.BINDWEED_WOODEN_POT.get(),
                 
                 ModBlocks.CACTUS_MARMOL_POT.get(),
                 ModBlocks.PINK_CACTUS_MARMOL_POT.get(),
@@ -27,6 +28,7 @@ public class PotLeavesClient {
                 ModBlocks.ALOE_VERA_MARMOL_POT.get(),
                 ModBlocks.MUSA_WOODEN_POT.get(),
                 ModBlocks.MUSA_MARMOL_POT.get(),
+                ModBlocks.BINDWEED_MARMOL_POT.get(),
 
                 ModBlocks.CACTUS_DESERT_POT.get());
 

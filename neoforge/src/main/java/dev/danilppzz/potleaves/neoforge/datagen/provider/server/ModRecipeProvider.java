@@ -4,13 +4,12 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import dev.danilppzz.potleaves.register.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import net.neoforged.fml.common.Mod;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
@@ -27,33 +26,13 @@ public class ModRecipeProvider extends RecipeProvider {
     protected void buildRecipes(@NotNull RecipeOutput arg) {
         this.output = arg;
         
-        shaped(ModBlocks.BIG_LEAVE_WOODEN_POT, 1, ModBlocks.WOODEN_POT.get(), shapedRecipeBuilder -> shapedRecipeBuilder
-                .define('A', Blocks.SHORT_GRASS)
-                .pattern("AAA")
-                .pattern("#  "));
-        
-        shaped(ModBlocks.MINI_WOODEN_POT, 1, ModBlocks.WOODEN_POT.get(), shapedRecipeBuilder -> shapedRecipeBuilder
-                .define('A', Blocks.OAK_SAPLING)
-                .pattern("A")
-                .pattern("#"));
-        
-        shaped(ModBlocks.CACTUS_WOODEN_POT, 1, ModBlocks.SLIM_WOODEN_POT.get(), shapedRecipeBuilder -> shapedRecipeBuilder
-                .define('A', Blocks.CACTUS)
-                .pattern("#A"));
-        
-        shaped(ModBlocks.LARGE_WOODEN_POT, 1, Blocks.SPRUCE_PLANKS, shapedRecipeBuilder -> shapedRecipeBuilder
+        shaped(ModBlocks.LARGE_WOODEN_POT, 2, Blocks.SPRUCE_PLANKS, shapedRecipeBuilder -> shapedRecipeBuilder
                 .define('A', Blocks.DIRT)
                 .define('B', Items.STICK)
                 .pattern("BAB")
                 .pattern("###"));
         
-        shaped(ModBlocks.PINK_CACTUS_WOODEN_POT, 1, ModBlocks.WOODEN_POT.get(), shapedRecipeBuilder -> shapedRecipeBuilder
-                .define('A', Blocks.CACTUS)
-                .define('B', Items.MAGENTA_DYE)
-                .pattern(" B")
-                .pattern("#A"));
-        
-        shaped(ModBlocks.SLIM_WOODEN_POT, 1, Blocks.SPRUCE_SLAB, shapedRecipeBuilder -> shapedRecipeBuilder
+        shaped(ModBlocks.SLIM_WOODEN_POT, 2, Blocks.SPRUCE_SLAB, shapedRecipeBuilder -> shapedRecipeBuilder
                 .define('A', Blocks.DIRT)
                 .pattern("#A#")
                 .pattern(" # "));
@@ -64,29 +43,44 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("A A")
                 .pattern("###"));
         
-        shaped(ModBlocks.SMALL_LEAVE_WOODEN_POT, 1, ModBlocks.WOODEN_POT.get(), shapedRecipeBuilder -> shapedRecipeBuilder
-                .define('A', Blocks.SHORT_GRASS)
-                .pattern("A")
-                .pattern("#"));
-        
-        shaped(ModBlocks.LARGE_LEAVE_WOODEN_POT, 1, ModBlocks.LARGE_WOODEN_POT.get(), shapedRecipeBuilder -> shapedRecipeBuilder
-                .define('A', Blocks.SHORT_GRASS)
-                .define('B', Items.ALLIUM)
-                .pattern("AAB")
-                .pattern(" # "));
-        
-        shaped(ModBlocks.WOODEN_POT, 1, Blocks.SPRUCE_PLANKS, shapedRecipeBuilder -> shapedRecipeBuilder
+        shaped(ModBlocks.WOODEN_POT, 2, Blocks.SPRUCE_PLANKS, shapedRecipeBuilder -> shapedRecipeBuilder
                 .define('A', Blocks.DIRT)
                 .pattern("#A#")
                 .pattern(" # "));
 
-        shaped(ModBlocks.CACTUS_DESERT_POT, 1, Items.BRICK, shapedRecipeBuilder -> shapedRecipeBuilder
-                .define('A', Blocks.CACTUS)
-                .define('B', Blocks.SAND)
+        shaped(ModBlocks.MARMOL_POT, 2, Blocks.QUARTZ_BLOCK, shapedRecipeBuilder -> shapedRecipeBuilder
+                .define('A', Blocks.DIRT)
+                .pattern("#A#")
+                .pattern(" # "));
+
+        shaped(ModBlocks.DESERT_POT, 2, Items.BRICK, shapedRecipeBuilder -> shapedRecipeBuilder
+                .define('B', Blocks.DIRT)
                 .define('C', Items.GOLD_INGOT)
-                .pattern(" A ")
                 .pattern("#B#")
-                .pattern("#C#"));
+                .pattern(" C "));
+
+        // STONECUTTER
+        stonecutter(ModBlocks.LARGE_LEAVE_WOODEN_POT, ModBlocks.LARGE_WOODEN_POT);
+
+        stonecutter(ModBlocks.CACTUS_WOODEN_POT, ModBlocks.WOODEN_POT);
+        stonecutter(ModBlocks.PINK_CACTUS_WOODEN_POT, ModBlocks.WOODEN_POT);
+        stonecutter(ModBlocks.SMALL_LEAVE_WOODEN_POT, ModBlocks.WOODEN_POT);
+        stonecutter(ModBlocks.BIG_LEAVE_WOODEN_POT, ModBlocks.WOODEN_POT);
+        stonecutter(ModBlocks.MINI_WOODEN_POT, ModBlocks.WOODEN_POT);
+        stonecutter(ModBlocks.ALOE_VERA_WOODEN_POT, ModBlocks.WOODEN_POT);
+        stonecutter(ModBlocks.MUSA_WOODEN_POT, ModBlocks.WOODEN_POT);
+        stonecutter(ModBlocks.BINDWEED_WOODEN_POT, ModBlocks.WOODEN_POT);
+
+        stonecutter(ModBlocks.CACTUS_MARMOL_POT, ModBlocks.MARMOL_POT);
+        stonecutter(ModBlocks.PINK_CACTUS_MARMOL_POT, ModBlocks.MARMOL_POT);
+        stonecutter(ModBlocks.SMALL_LEAVE_MARMOL_POT, ModBlocks.MARMOL_POT);
+        stonecutter(ModBlocks.BIG_LEAVE_MARMOL_POT, ModBlocks.MARMOL_POT);
+        stonecutter(ModBlocks.MINI_MARMOL_POT, ModBlocks.MARMOL_POT);
+        stonecutter(ModBlocks.ALOE_VERA_MARMOL_POT, ModBlocks.MARMOL_POT);
+        stonecutter(ModBlocks.MUSA_MARMOL_POT, ModBlocks.MARMOL_POT);
+        stonecutter(ModBlocks.BINDWEED_MARMOL_POT, ModBlocks.MARMOL_POT);
+
+        stonecutter(ModBlocks.CACTUS_DESERT_POT, ModBlocks.DESERT_POT);
     }
     
     private void shaped(RegistrySupplier<? extends ItemLike> result, int count, ItemLike main, Function<ShapedRecipeBuilder, ShapedRecipeBuilder> builder) {
@@ -94,5 +88,15 @@ public class ModRecipeProvider extends RecipeProvider {
                         .define('#', main)
                         .unlockedBy("has_" + result.getId().getPath(), has(main)))
                 .save(output);
+    }
+
+    private void stonecutter(RegistrySupplier<? extends ItemLike> result, RegistrySupplier<? extends ItemLike> input) {
+        SingleItemRecipeBuilder.stonecutting(
+                        Ingredient.of(input.get()),  // Input desde ModBlocks
+                        RecipeCategory.MISC,         // Categoría
+                        result.get()                 // Resultado
+                )
+                .unlockedBy("has_" + input.get().asItem().getDescriptionId(), has(input.get()))
+                .save(output, "stonecutting_" + result.get().asItem().getDescriptionId());
     }
 }

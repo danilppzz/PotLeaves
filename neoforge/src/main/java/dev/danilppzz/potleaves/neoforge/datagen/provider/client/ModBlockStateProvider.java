@@ -5,6 +5,7 @@ import dev.danilppzz.potleaves.PotLeaves;
 import dev.danilppzz.potleaves.register.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -36,6 +37,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlock(ModBlocks.MUSA_WOODEN_POT);
         horizontalBlock(ModBlocks.MUSA_MARMOL_POT);
         horizontalBlock(ModBlocks.CACTUS_DESERT_POT);
+        horizontalBlock(ModBlocks.DESERT_POT);
+        horizontalBlock(ModBlocks.BINDWEED_WOODEN_POT);
+        horizontalBlock(ModBlocks.BINDWEED_MARMOL_POT);
         
     }
     

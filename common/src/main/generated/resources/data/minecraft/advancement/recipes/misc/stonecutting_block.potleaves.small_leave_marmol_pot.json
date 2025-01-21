@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_pink_cactus_wooden_pot": {
+    "has_block.potleaves.marmol_pot": {
       "conditions": {
         "items": [
           {
-            "items": "potleaves:wooden_pot"
+            "items": "potleaves:marmol_pot"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "potleaves:pink_cactus_wooden_pot"
+        "recipe": "minecraft:stonecutting_block.potleaves.small_leave_marmol_pot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_pink_cactus_wooden_pot"
+      "has_block.potleaves.marmol_pot"
     ]
   ],
   "rewards": {
     "recipes": [
-      "potleaves:pink_cactus_wooden_pot"
+      "minecraft:stonecutting_block.potleaves.small_leave_marmol_pot"
     ]
   }
 }

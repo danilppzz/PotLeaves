@@ -5,23 +5,19 @@
     "#": {
       "item": "minecraft:brick"
     },
-    "A": {
-      "item": "minecraft:cactus"
-    },
     "B": {
-      "item": "minecraft:sand"
+      "item": "minecraft:dirt"
     },
     "C": {
       "item": "minecraft:gold_ingot"
     }
   },
   "pattern": [
-    " A ",
     "#B#",
-    "#C#"
+    " C "
   ],
   "result": {
-    "count": 1,
-    "id": "potleaves:cactus_desert_pot"
+    "count": 2,
+    "id": "potleaves:pot_desert_pot"
   }
 }
