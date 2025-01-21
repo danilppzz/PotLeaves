@@ -1,17 +1,14 @@
-<div style="text-align:center">
-    <img src="https://raw.githubusercontent.com/danilppzz/PotLeaves/master/docs/resources/_BANNER.png" alt="BANNER" style="max-width:100%;">
-</div>
-
-
-## About
+<span style="display: flex; justify-content: space-between; align-items: center;">
+    
+# Pot Leaves
 This mod is very simple, it basically adds a bunch of pots with different plants.
 Some of them have special functions like attracting some mobs/animals, or other functions like foot farming and more.
- 
-> [!IMPORTANT]
-> This mod is only going to be able for minecraft 1.20^
 
-## Features
-This are some of the Blocks that the mod have. in the future i will add some extra mechanics and more pot leaves.
-| ![[Image 1](img1.jpg)](https://raw.githubusercontent.com/danilppzz/PotLeaves/master/docs/resources/POT.png) | ![[Image 2](img2.jpg)](https://raw.githubusercontent.com/danilppzz/PotLeaves/master/docs/resources/POT_1.png) | ![[Image 3](img3.jpg)](https://raw.githubusercontent.com/danilppzz/PotLeaves/master/docs/resources/POT_2.png) | ![[Image 4](img4.jpg)](https://raw.githubusercontent.com/danilppzz/PotLeaves/master/docs/resources/wooden_box.png) |
-|-----------------------|-----------------------|-----------------------|-----------------------|
+<img src="https://github.com/user-attachments/assets/67a93146-2a49-4c13-a755-d0d792dedfc1" alt="Descripción de la imagen" width="200">
 
+</span>
+
+## Recipes
+All the recipes of the pots are in the stonecutter, but the base pots have other crafting recipe in the crafting table.
+To craft the pots you need to place the pot you want at stonecutter and select the pot you like.
+Just like this, a simple way to craft pots.
