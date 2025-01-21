@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "potleaves:block/desert_pot",
-		"particle": "potleaves:block/desert_pot"
+		"0": "potleaves:block/pot_desert_pot",
+		"particle": "potleaves:block/pot_desert_pot"
 	},
 	"elements": [
 		{
@@ -100,27 +100,35 @@
 				"up": {"uv": [4.8, 11.52, 5.48, 12], "texture": "#0"},
 				"down": {"uv": [0, 11.44, 4.04, 11.84], "texture": "#0"}
 			}
-		},
-		{
-			"from": [6, 6, 6],
-			"to": [10, 16, 10],
-			"faces": {
-				"north": {"uv": [5.6, 3.2, 8.8, 11.2], "texture": "#0"},
-				"east": {"uv": [5.6, 3.2, 8.8, 11.2], "texture": "#0"},
-				"south": {"uv": [5.6, 3.2, 8.8, 11.2], "texture": "#0"},
-				"west": {"uv": [5.6, 3.2, 8.8, 11.2], "texture": "#0"},
-				"up": {"uv": [12.8, 4.8, 16, 8], "texture": "#0"},
-				"down": {"uv": [12.8, 4.8, 16, 8], "texture": "#0"}
-			}
 		}
 	],
 	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 3, 1],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 3, 1],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"firstperson_righthand": {
+			"translation": [0, 3.75, 0]
+		},
+		"firstperson_lefthand": {
+			"translation": [0, 3.75, 0]
+		},
 		"ground": {
 			"translation": [0, 4.5, 0]
 		},
 		"gui": {
 			"rotation": [30, 225, 0],
-			"scale": [0.625, 0.625, 0.625]
+			"translation": [0, 3.75, 0]
+		},
+		"head": {
+			"translation": [0, 14.5, 0]
+		},
+		"fixed": {
+			"translation": [0, 0, -4.25]
 		}
 	},
 	"groups": [
@@ -134,7 +142,7 @@
 			"name": "group",
 			"origin": [8, 8, 8],
 			"color": 0,
-			"children": [8]
+			"children": []
 		}
 	]
 }

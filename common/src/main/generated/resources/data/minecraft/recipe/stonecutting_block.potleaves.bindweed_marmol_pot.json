@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "potleaves:marmol_pot"
+  },
+  "result": {
+    "count": 1,
+    "id": "potleaves:bindweed_marmol_pot"
+  }
+}

@@ -3,18 +3,18 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "potleaves:wooden_pot"
+      "item": "minecraft:quartz_block"
     },
     "A": {
-      "item": "minecraft:short_grass"
+      "item": "minecraft:dirt"
     }
   },
   "pattern": [
-    "A",
-    "#"
+    "#A#",
+    " # "
   ],
   "result": {
-    "count": 1,
-    "id": "potleaves:small_leave_wooden_pot"
+    "count": 2,
+    "id": "potleaves:marmol_pot"
   }
 }

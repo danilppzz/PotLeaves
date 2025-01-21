@@ -19,5 +19,9 @@
   "block.potleaves.aloe_vera_wooden_pot": "Aloe Vera Wooden Pot",
   "block.potleaves.aloe_vera_marmol_pot": "Aloe Vera Marmol Pot",
   "block.potleaves.musa_wooden_pot": "Musa Wooden Pot",
-  "block.potleaves.musa_marmol_pot": "Musa Marmol Pot"
+  "block.potleaves.musa_marmol_pot": "Musa Marmol Pot",
+  "block.potleaves.cactus_desert_pot": "Cactus Desert Pot",
+  "block.potleaves.pot_desert_pot": "Desert Pot",
+  "block.potleaves.bindweed_wooden_pot": "Bindweed Wooden Pot",
+  "block.potleaves.bindweed_marmol_pot": "Bindweed Marmol Pot"
 }
